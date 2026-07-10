@@ -1,17 +1,17 @@
-# 🍔 Sistema de Pedidos de Lanchonete (POO em Java)
+# Sistema de Pedidos de Lanchonete (POO em Java)
 
 Aplicação desktop em **Java + Swing** desenvolvida para a disciplina de **Programação Orientada a Objetos**.  
 O sistema simula o fluxo de pedidos de uma lanchonete, com telas separadas para:
 
-- 📋 Fazer o pedido (atendimento/caixa)
-- 👩‍🍳 Acompanhar pedidos na cozinha
-- 🧾 Painel de retirada para exibir pedidos prontos
+- Fazer o pedido (atendimento/caixa)
+- Acompanhar pedidos na cozinha
+- Painel de retirada para exibir pedidos prontos
 
 Tudo estruturado com **POO**, uso de **interfaces**, **herança**, **coleções** e alguns **padrões de projeto** (Singleton, Observer, Strategy).
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - Cadastro rápido do cliente (nome)
 - Montagem do pedido com:
@@ -33,7 +33,7 @@ Tudo estruturado com **POO**, uso de **interfaces**, **herança**, **coleções*
 
 ---
 
-## 🧠 Conceitos de POO utilizados
+## Conceitos de POO utilizados
 
 O projeto foi pensado para praticar os principais conceitos de Programação Orientada a Objetos:
 
@@ -62,7 +62,7 @@ O projeto foi pensado para praticar os principais conceitos de Programação Ori
 
 ---
 
-## 🧩 Padrões de Projeto
+## Padrões de Projeto
 
 Alguns padrões clássicos aparecem no projeto:
 
@@ -82,7 +82,7 @@ Alguns padrões clássicos aparecem no projeto:
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 
 Organização sugerida de pastas:
 
