@@ -1,0 +1,70 @@
+@startuml
+' Título e estilo do diagrama
+title Arquitetura Principal e Padrões de Projeto
+skinparam classAttributeIconSize 0
+
+' --- Componentes Principais ---
+
+class GerenciadorPedidos <<Singleton>> {
+  +getInstancia()
+  +adicionarPedido(Pedido)
+  +adicionarObservador(ObservadorPedidos)
+}
+
+class TelaPedido {
+  -finalizarPedido()
+}
+
+class TelaCozinha {
+  +atualizar()
+}
+
+class TelaRetirada {
+  +atualizar()
+}
+
+class Pedido {
+  +calcularTotal(): double
+}
+
+interface ObservadorPedidos {
+  +atualizar()
+}
+
+interface Pagamento {
+  +pagar(double): String
+}
+
+abstract class Produto {
+  +getPreco(): double
+}
+
+' --- Exemplos para ilustrar os padrões ---
+class PagamentoCartao
+class XBurger
+class Agua
+
+
+' --- Relacionamentos ---
+
+' Padrão Observer
+GerenciadorPedidos o-- ObservadorPedidos : notifica
+ObservadorPedidos <|.. TelaCozinha
+ObservadorPedidos <|.. TelaRetirada
+
+' Padrão Strategy
+TelaPedido ..> Pagamento : utiliza
+Pagamento <|.. PagamentoCartao
+
+' Relações de Agregação e Dependência
+GerenciadorPedidos o-- Pedido : gerencia
+Pedido *-- Produto : contém
+TelaPedido ..> Pedido : cria
+TelaPedido ..> XBurger : cria
+TelaPedido ..> Agua : cria
+
+' Herança (apenas para exemplo)
+Produto <|-- XBurger
+Produto <|-- Agua
+
+@enduml

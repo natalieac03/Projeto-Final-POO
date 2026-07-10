@@ -1,0 +1,8 @@
+package produtos;
+
+public abstract class Lanche extends Produto {
+    public Lanche(String nome, double preco) {
+        super(nome, preco);
+    }
+}
+
